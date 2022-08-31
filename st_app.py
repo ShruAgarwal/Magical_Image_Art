@@ -18,7 +18,7 @@ def get_img_as_base64(file):
     return base64.b64encode(data).decode()
 
 
-img = get_img_as_base64("https://github.com/ShruAgarwal/Magical_Image_Art/blob/main/bg_show.png")
+img = get_img_as_base64("bg_show.png")
 
 page_bg_img = f"""
 <style>
