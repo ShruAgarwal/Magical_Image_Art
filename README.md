@@ -9,9 +9,13 @@
  
  ### App is built with libraries 
  1️⃣ `opencv` -- for applying effects on the image
+ 
  2️⃣ `numpy`  -- is used to convert, read, perform array methods on the image 
+ 
  3️⃣ `Pillow` -- used to convert the numpy array & return back an image  
+ 
  4️⃣ `streamlit` -- for hosting the UI for the App
+ 
  5️⃣ `streamlit_image_comparison` -- for showcasing the effects applied!
  
  ### 💡 Idea behind building this App 
