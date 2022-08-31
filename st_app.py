@@ -10,6 +10,7 @@ st.set_page_config(
     page_title="Magical Image Art", page_icon='🌟',
 )
 
+# Displaying local image with css
 @st.experimental_memo
 def get_img_as_base64(file):
     with open(file, "rb") as f:
@@ -25,7 +26,7 @@ page_bg_img = f"""
 [data-testid="stAppViewContainer"] > .main {{
 background: rgba(0,0,0,0);
 background-image: url("data:image/png;base64,{img}");
-background-size: 23% 90%;
+background-size: 23% 97%;
 background-position: left; 
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -41,12 +42,12 @@ st.write('## Magical Art Effects on Image using OpenCV 🧙‍♂️✨')
 [![Follow](https://img.shields.io/twitter/follow/Shru_explores?style=social)](https://www.twitter.com/Shru_explores)
 """
 
-with st.expander("PLEASE READ INFO 👇"):
-    st.write("""This app converts an image into three different forms,
+with st.expander("⭐ HIGHLIGHTS OF THE APP"):
+    st.write("""This app can convert & apply three different effects on an Image,
              i.e, `pop/dotted art`, `water color art` & `cartoon style art`.
-             \n 👈 *On the left is an illustration of effects applied on images*
-             \nAll the above opeartions are done using *OPENCV & NUMPY*  libraries! 🤯
-             \nDon't forget to check the code on **GITHUB**
+             \nAll the above effects are given using two python libraries -- *OPENCV & NUMPY* 🤯
+             \n 👈 *On the left is an illustration of effects applied onto images*
+             \nHope you'll like it! 🙌
 
                  """)
 
@@ -56,7 +57,7 @@ uploaded = st.file_uploader("UPLOAD AN IMAGE")
 if uploaded is not None:
     display_image = Image.open(uploaded)
 #else:
-    #st.write('Please')
+    #st.write('')
 #########################################################################
 # FUNCTIONS FOR APPLYING VARIETY OF EFFECTS
 def pop_art(original):
@@ -85,8 +86,8 @@ def pop_art(original):
    # extract dimensions of new image
    downsized_image_height, downsized_image_width = downsized_image.shape
 
-   # set how big we want our final image to be
-   multiplier = 30
+   # final image size
+   multiplier = 35
 
    # set the size of our blank canvas
    blank_img_height = downsized_image_height * multiplier
@@ -109,7 +110,8 @@ def pop_art(original):
 def cartoon_style(original):
     image_1 = np.array(original)
     
-    # applying cv2 effects
+    # applying effects --> sigma_s : Range between 0 to 200.
+    # sigma_r : Range between 0 to 1.
     cartoon_image = cv2.stylization(image_1, sigma_s=150, sigma_r=0.25) 
     cartoon_image = Image.fromarray(cartoon_image)
     return cartoon_image
@@ -159,20 +161,19 @@ def image_slide(new_img):
 ##################################################################################
 # DISPLAYING RESULTS!
 
-if st.button('Check Results! 🤞'):
+if st.button('See the Magic! 🎉'):
     tab1, tab2, tab3 = st.tabs(["CARTOON 😲", "POP ART 👀", "WATERCOLOR 🎨"])
     with tab1:
-        st.write('### Cartoon Styled Image ---')
+        st.write('### CARTOON STYLED IMAGE')
         cartoon_img = cartoon_style(display_image)
         image_slide(cartoon_img)
         
     with tab2:
-        st.write('### Pop Art Image --- ')
+        st.write('### POP ART IMAGE')
         pop_art(display_image)
         
     with tab3:
-        st.write('### Watercolor Painted Image ---')
+        st.write('### WATERCOLOR STYLED IMAGE')
         painting_img = waterColor_style(display_image)
         image_slide(painting_img)
-        
         
