@@ -6,8 +6,11 @@
 **This App can** :
  - Convert & Apply three different styling effects to an Image 🌈
  - Style Effects are --> *Pop / dotted art, Cartoon art, Water Color Painted art*
+
+### 🕹 App Demo
+![alt text](https://github.com/ShruAgarwal/Magical_Image_Art/blob/main/demo.gif)
  
- ### App is built with libraries 
+ ### 🛠 App is built with libraries 
  1️⃣ `opencv` -- for applying effects on the image
  
  2️⃣ `numpy`  -- is used to convert, read, perform array methods on the image 
