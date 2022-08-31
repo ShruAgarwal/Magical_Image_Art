@@ -38,7 +38,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.write('## Magical Art Effects on Image using OpenCV 🧙‍♂️✨')
 
 """
-[![Star](https://img.shields.io/github/stars/ShruAgarwal/Magical_Image_Art.svg?logo=github&style=social)](https://github.com/ShruAgarwal)
+[![Star](https://img.shields.io/github/stars/ShruAgarwal/Magical_Image_Art.svg?logo=github&style=social)](https://github.com/ShruAgarwal/Magical_Image_Art)
 [![Follow](https://img.shields.io/twitter/follow/Shru_explores?style=social)](https://www.twitter.com/Shru_explores)
 """
 
