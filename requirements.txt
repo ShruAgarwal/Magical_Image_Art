@@ -1,4 +1,3 @@
-opencv-python
 opencv-contrib-python-headless
 numpy
 Pillow
