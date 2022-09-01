@@ -26,9 +26,7 @@
  Learnt a lot while trying these effects as well as unleashed the power of OpenCV in general. 😉
  
 ### References
-- 💜[Thanks to Fanilo for Background Image CSS Hack](https://github.com/andfanilo/social-media-tutorials/tree/master/20220817-streamlit_css_background)
 - [OpenCV Docs](https://docs.opencv.org/4.x/index.html)
 - [Amazing Article for creating Pop Art Image](https://www.analytics-link.com/post/2019/07/11/creating-pop-art-using-opencv-and-python)
 - [Github repo for Water Color Art](https://github.com/Aman-Preet-Singh-Gulati/photo2-watercolor-art)
 - [Component repo for Image Comparison](https://github.com/fcakyon/streamlit-image-comparison)
-
