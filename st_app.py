@@ -69,11 +69,11 @@ def pop_art(original):
    image = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
 
    # set colours (BGR)
-   background_colour = [247,19,217] #41, 212, 248
+   background_colour = [247,19,217] 
    dots_colour = (13, 10, 52) 
 
    # set the max dots (on the longest side of the image)
-   max_dots = 180
+   max_dots = 170
    
    # extract dimensions
    image_height, image_width = image.shape
@@ -88,7 +88,7 @@ def pop_art(original):
    downsized_image_height, downsized_image_width = downsized_image.shape
 
    # final image size
-   multiplier = 35
+   multiplier = 30
 
    # set the size of our blank canvas
    blank_img_height = downsized_image_height * multiplier
