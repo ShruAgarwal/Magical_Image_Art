@@ -1,6 +1,6 @@
 ## Magical Image Art ✨🤯
 
-### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shruagarwal-magical-image-art-st-app-k0n0bb.streamlitapp.com/)
+### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shruagarwal-magical-image-art.streamlitapp.com/)
 
 
 **This App can** :
