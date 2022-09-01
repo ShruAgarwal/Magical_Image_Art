@@ -1,4 +1,3 @@
-import base64
 import cv2
 import numpy as np
 from PIL import Image
@@ -10,33 +9,11 @@ st.set_page_config(
     page_title="Magical Image Art", page_icon='🌟',
 )
 
-# Displaying local image with css
-@st.experimental_memo
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-
-img = get_img_as_base64("bg_show.png")
-
-page_bg_img = f"""
-<style>
-
-[data-testid="stSidebar"] > div:first-child {{
-background: rgba(0,0,0,0);
-background-image: url("data:image/png;base64,{img}");
-background-size: 22% 99%;
-background-position: left; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-}}
-</style>
-"""
-
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.write('## Magical Art Effects on Image using OpenCV 🧙‍♂️✨')
-st.sidebar.write('')
+with st.sidebar:
+    bg = Image.open('bg_show.png')
+    st.image(bg, width=327)
 
 """
 [![Star](https://img.shields.io/github/stars/ShruAgarwal/Magical_Image_Art.svg?logo=github&style=social)](https://github.com/ShruAgarwal/Magical_Image_Art)
