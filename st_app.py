@@ -123,18 +123,6 @@ def waterColor_style(original):
     image_sharp = Image.fromarray(image_sharp)
     return image_sharp
 
-####################################################################################
-# Render image-comparison
-def image_slide(new_img):
-    
-    img_compare(
-        img1=display_image,
-        img2=new_img,
-        label1="original",
-        label2="new",
-        width=800,
-        show_labels=True,
-        )
 ##################################################################################
 # DISPLAYING RESULTS!
 
@@ -143,7 +131,15 @@ if st.button('See the Magic! 🎉'):
     with tab1:
         st.write('### CARTOON STYLED IMAGE')
         cartoon_img = cartoon_style(display_image)
-        image_slide(cartoon_img)
+        # Using image-comparison
+        img_compare(
+        img1=display_image,
+        img2=cartoon_img,
+        label1="original",
+        label2="new",
+        width=800,
+        show_labels=True,
+        )
         
     with tab2:
         st.write('### POP ART IMAGE')
@@ -152,5 +148,12 @@ if st.button('See the Magic! 🎉'):
     with tab3:
         st.write('### WATERCOLOR STYLED IMAGE')
         painting_img = waterColor_style(display_image)
-        image_slide(painting_img)
+        img_compare(
+        img1=display_image,
+        img2=painting_img,
+        label1="original",
+        label2="new",
+        width=800,
+        show_labels=True,
+        )
         
