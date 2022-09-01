@@ -9,7 +9,6 @@ st.set_page_config(
     page_title="Magical Image Art", page_icon='🌟',
 )
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
 st.write('## Magical Art Effects on Image using OpenCV 🧙‍♂️✨')
 with st.sidebar:
     bg = Image.open('bg_show.png')
