@@ -23,10 +23,10 @@ img = get_img_as_base64("bg_show.png")
 page_bg_img = f"""
 <style>
 
-[data-testid="stAppViewContainer"] > .main {{
+[data-testid="stSidebar"] > div:first-child {{
 background: rgba(0,0,0,0);
 background-image: url("data:image/png;base64,{img}");
-background-size: 23% 97%;
+background-size: 22% 99%;
 background-position: left; 
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -36,6 +36,7 @@ background-attachment: fixed;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.write('## Magical Art Effects on Image using OpenCV 🧙‍♂️✨')
+st.sidebar.write('')
 
 """
 [![Star](https://img.shields.io/github/stars/ShruAgarwal/Magical_Image_Art.svg?logo=github&style=social)](https://github.com/ShruAgarwal/Magical_Image_Art)
@@ -46,7 +47,7 @@ with st.expander("⭐ HIGHLIGHTS OF THE APP"):
     st.write("""This app can convert & apply three different effects on an Image,
              i.e, `pop/dotted art`, `water color art` & `cartoon style art`.
              \nAll the above effects are given using two python libraries -- *OPENCV & NUMPY* 🤯
-             \n 👈 *On the left is an illustration of effects applied onto images*
+             \n 👈 *Sidebar (in left) is an illustration of effects applied onto images*
              \nHope you'll like it! 🙌
 
                  """)
