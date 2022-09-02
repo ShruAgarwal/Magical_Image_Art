@@ -120,8 +120,8 @@ def waterColor_style(original):
     image_sharp = cv2.addWeighted(image_filtered, 1.5, gaussian_mask, -0.5, 0)
     image_sharp = cv2.addWeighted(image_sharp, 1.4, gaussian_mask, -0.2, 10)
 
-    image_sharp = Image.fromarray(image_sharp)
-    return image_sharp
+    #image_sharp = Image.fromarray(image_sharp)
+    return st.image(image_sharp)
 
 ##################################################################################
 # DISPLAYING RESULTS!
@@ -147,13 +147,6 @@ if st.button('See the Magic! 🎉'):
         
     with tab3:
         st.write('### WATERCOLOR STYLED IMAGE')
-        painting_img = waterColor_style(display_image)
-        img_compare(
-        img1=display_image,
-        img2=painting_img,
-        label1="original",
-        label2="new",
-        width=800,
-        show_labels=True,
-        )
+        waterColor_style(display_image)
+        
         
