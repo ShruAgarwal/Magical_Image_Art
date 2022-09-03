@@ -26,6 +26,7 @@
  Learnt a lot while trying these effects as well as unleashed the power of OpenCV in general. 😉
  
 ### References
+<!-- #-->
 - [OpenCV Docs](https://docs.opencv.org/4.x/index.html)
 - [Amazing Article for creating Pop Art Image](https://www.analytics-link.com/post/2019/07/11/creating-pop-art-using-opencv-and-python)
 - [Github repo for Water Color Art](https://github.com/Aman-Preet-Singh-Gulati/photo2-watercolor-art)
