@@ -43,53 +43,52 @@ def upload_img():
 #########################################################################
 # FUNCTIONS FOR APPLYING VARIETY OF EFFECTS
 def pop_art(original):
-   
-  try:
-        original = np.array(original)
-   
-        # import the image as greyscale
-        image = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
-
-        # set colours (BGR)
-        background_colour = [247,19,217] 
-        dots_colour = (13, 10, 52) 
-
-        # set the max dots (on the longest side of the image)
-        max_dots = 180
     
-        # extract dimensions
-        image_height, image_width = image.shape
+    original = np.array(original)
+   
+    # import the image as greyscale
+    image = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
 
-        # down size to number of dots
-        if image_height == max(image_height,image_width):
-            downsized_image = cv2.resize(image,(int(image_height*(max_dots/image_width)),max_dots))
-        else:
-            downsized_image = cv2.resize(image,(max_dots,int(image_height*(max_dots/image_width))))
+    # set colours (BGR)
+    background_colour = [247,19,217] 
+    dots_colour = (13, 10, 52) 
 
-        # extract dimensions of new image
-        downsized_image_height, downsized_image_width = downsized_image.shape
+    # set the max dots (on the longest side of the image)
+    max_dots = 180
+    
+    # extract dimensions
+    image_height, image_width = image.shape
 
-        # final image size
-        multiplier = 30
-
-        # set the size of our blank canvas
-        blank_img_height = downsized_image_height * multiplier
-        blank_img_width = downsized_image_width * multiplier
-
-        # set the padding value so the dots start in frame (rather than being off the edge)
-        padding = int(multiplier/2)
-
-        # create canvas containing just the background colour
-        blank_img = np.full(((blank_img_height),(blank_img_width),3), background_colour,dtype=np.uint8)
-
-        # run through each pixel and draw the circle on our blank canvas
-        for y in range(0,downsized_image_height):
-            for x in range(0,downsized_image_width):
-                cv2.circle(blank_img,(((x*multiplier)+padding),((y*multiplier)+padding)), int((0.6 * multiplier) * ((255-downsized_image[y][x])/255)), dots_colour, -1)
-    except cv2.error as error:
-        st.warning("[Error]: {}".format(error))
+    # down size to number of dots
+    if image_height == max(image_height,image_width):
+        downsized_image = cv2.resize(image,(int(image_height*(max_dots/image_width)),max_dots))
     else:
-        return st.image(blank_img)
+        downsized_image = cv2.resize(image,(max_dots,int(image_height*(max_dots/image_width))))
+
+    # extract dimensions of new image
+    downsized_image_height, downsized_image_width = downsized_image.shape
+
+    # final image size
+    multiplier = 30
+
+    # set the size of our blank canvas
+    blank_img_height = downsized_image_height * multiplier
+    blank_img_width = downsized_image_width * multiplier
+
+    # set the padding value so the dots start in frame (rather than being off the edge)
+    padding = int(multiplier/2)
+
+    # create canvas containing just the background colour
+    blank_img = np.full(((blank_img_height),(blank_img_width),3), background_colour,dtype=np.uint8)
+
+    # run through each pixel and draw the circle on our blank canvas
+    for y in range(0,downsized_image_height):
+        for x in range(0,downsized_image_width):
+            cv2.circle(blank_img,(((x*multiplier)+padding),((y*multiplier)+padding)), int((0.6 * multiplier) * ((255-downsized_image[y][x])/255)), dots_colour, -1)
+            
+    return st.image(blank_img)
+   
+    
 
 ########################################################################
 def cartoon_style(original):
