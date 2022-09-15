@@ -144,7 +144,7 @@ def waterColor_style(original):
     except cv2.error as error:
         st.warning("[Error]: {}".format(error))
     else:
-        return st.image(image_sharp)
+        return st.image(image_sharp, width=780)
 
 ##################################################################################
 # DISPLAYING RESULTS!
