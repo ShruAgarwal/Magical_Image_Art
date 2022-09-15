@@ -86,7 +86,6 @@ def pop_art(original):
         for y in range(0,downsized_image_height):
             for x in range(0,downsized_image_width):
                 cv2.circle(blank_img,(((x*multiplier)+padding),((y*multiplier)+padding)), int((0.6 * multiplier) * ((255-downsized_image[y][x])/255)), dots_colour, -1)
-    
     except cv2.error as error:
         st.warning("[Error]: {}".format(error))
     else:
