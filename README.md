@@ -1,6 +1,6 @@
 ## Magical Image Art ✨🤯
 
-### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shruagarwal-magical-image-art.streamlitapp.com/)
+### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://magical-image-art.streamlitapp.com/)
 
 
 **This App can** :
@@ -19,7 +19,7 @@
  
  4️⃣ `streamlit` -- for hosting the UI for the App
  
- 5️⃣ `streamlit_image_comparison` -- for showcasing the effects applied!
+ <!--5️⃣ `streamlit_image_comparison` -- for showcasing the effects applied!-->
  
  ### 💡 Idea behind building this App 
  Well, I've already tried the `Pencil Sketch Effect` using OpenCV, but never thought of applying such amazing effects on an Image using Python! 
