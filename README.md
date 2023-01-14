@@ -1,6 +1,6 @@
 ## Magical Image Art ✨🤯
 
-### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://magical-image-art.streamlitapp.com/)
+### Try it here : [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://magical-image-art.streamlitapp.com/](https://tox1ccoder-salaryprediction-app-tk4uar.streamlit.app/))
 
 
 **This App can** :
